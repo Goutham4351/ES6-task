@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form with LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>User Form</h2>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="text" id="phone" placeholder="Phone Number" required pattern="\d{10}" title="Enter a 10-digit number" maxlength="10">
+    <button type="submit">Add User</button>
+  </form>
+
+  <h3>Actions</h3>
+  <button onclick="sortByAge()">Sort by Age</button>
+  <button onclick="filterAdults()">Show Age 18+</button>
+  <button onclick="resetFilter()">Reset Filter</button>
+  <button onclick="clearAll()" class="clear-btn">Clear All</button>
+
+  <h2>User List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody id="userTableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
